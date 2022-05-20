@@ -16,8 +16,8 @@ class TelephoneForm(ModelForm):
 class CategorieForm(ModelForm):
     class Meta:
         model = models.Categorie
-        fields = ('nom', 'details')
+        fields = ('nom','details')
         labels = {
             'nom' : _('Nom'),
-            'details' : _('Détails'),
+            'details': _('Détails'),
         }
