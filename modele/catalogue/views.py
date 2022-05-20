@@ -22,7 +22,7 @@ def traitement(request, id):
         telephone.categorie = categorie
         telephone.categorie_id = id
         telephone.save()
-        return HttpResponseRedirect("/infos")
+        return HttpResponseRedirect("/infoscategorie")
     else :
         return render(request,"telephone/ajout.html", {"form": tform})
 
@@ -52,4 +52,4 @@ def updatetraitement(request, id):
 def delete(request, id):
     telephone = models.Telephone.objects.get(pk=id)
     telephone.delete()
-    return HttpResponseRedirect("/infos/")
+    return HttpResponseRedirect("/infoscategorie/")

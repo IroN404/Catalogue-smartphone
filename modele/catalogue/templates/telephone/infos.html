@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "telephone/main.html" %}
+{% block title %}
+    Liste SmartPhones
+{% endblock %}
+{% block content %}
+<div class="content">
 <h1>liste telephone</h1>
 <a href="/ajout">ajouter un livre</a>
 <ol>
@@ -12,5 +11,5 @@
         <li>{{l}} <a href="/affiche/{{l.id}}">afficher</a> <a href="/update/{{l.id}}">update</a> <a href="/delete/{{l.id}}">delete</a></li>
     {% endfor %}
 </ol>
-</body>
-</html>
+</div>
+{% endblock %}

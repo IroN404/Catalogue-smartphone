@@ -11,7 +11,7 @@
 <ol>
     Liste des livres de la catégorie :
     {% for l in liste %}
-    <li> {{l.nom}} </li>
+    <li> {{l.modele}}<a href="/delete/{{l.id}}">delete</a> </li>
     {% endfor %}
 </ol>
 </body>

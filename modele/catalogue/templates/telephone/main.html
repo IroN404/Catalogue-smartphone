@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+{% load static %}
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{%static 'css/main.css' %}">
+    <link rel="icon" href="{%static 'favicon/favicon.ico' %}">
+    <title>{% block title %}Page d'acceuil{% endblock %}</title>
 </head>
+
+<header>
+    <div class="container">
+      <div class="buttons">
+        <a href="/" class="btn btn-1">Home</a>
+      </div>
+      <div class="buttons">
+        <a href="/ajoutcategorie" class="btn btn-1">Formulaire</a>
+      </div>
+      <div class="buttons">
+        <a href="/infos" class="btn btn-1">Infos téléphone</a>
+      </div>
+      <div class="buttons">
+        <a href="/infoscategorie" class="btn btn-1">Catégorie</a>
+      </div>
+    </div>
+</header>
+
 <body>
-<a href="/infos">ajout tel</a>
-<a href="/infoscategorie">ajout cat</a>
+        {% block content %}
+        <div class="content">
+            <h1>Catalogue de SmartPhones</h1>
+        </div>
+        {% endblock %}
 </body>
 </html>
