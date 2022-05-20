@@ -74,3 +74,31 @@ body {
 .btn-1:hover::after {
   transform: rotate(150deg);
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height:75vh;
+  height: auto;
+  align-items: center;
+  color: white;
+  border:solid 1px;
+}
+
+.box{
+    padding-top: 30px;
+    text-decoration: none;
+}
+li{
+    margin: 15px 15px;
+}
+a{
+     text-decoration: none;
+     color: rgba(39, 200, 255, 0.5);
+     margin: 15px 15 px;
+     padding-top: 15px
+}
+h1{
+    Padding-bottom:15px;
+}

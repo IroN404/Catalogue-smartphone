@@ -4,6 +4,7 @@
 {% endblock %}
 {% block content %}
 <div class="content">
+    <div class="box">
 <h1>liste telephone</h1>
 <a href="/ajout">ajouter un livre</a>
 <ol>
@@ -11,5 +12,6 @@
         <li>{{l}} <a href="/affiche/{{l.id}}">afficher</a> <a href="/update/{{l.id}}">update</a> <a href="/delete/{{l.id}}">delete</a></li>
     {% endfor %}
 </ol>
+    </div>
 </div>
 {% endblock %}
