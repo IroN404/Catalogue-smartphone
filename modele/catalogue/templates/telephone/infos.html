@@ -9,7 +9,7 @@
 <a href="/ajout">ajouter un livre</a>
 <ol>
     {% for l in liste %}
-        <li>{{l}} <a href="/affiche/{{l.id}}">afficher</a></li>
+        <li>{{l}} <a href="/affiche/{{l.id}}">afficher</a> <a href="/update/{{l.id}}">update</a> </li>
     {% endfor %}
 </ol>
 </body>

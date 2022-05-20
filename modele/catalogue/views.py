@@ -29,3 +29,18 @@ def infos(request):
 def affiche(request, id):
     telephone = models.Telephone.objects.get(pk=id)
     return render(request, "telephone/affiche.html", {"telephone":telephone})
+
+def update(request, id):
+    telephone = models.Telephone.objects.get(pk=id)
+    form = TelephoneForm(telephone.dico())
+    return render(request, "telephone/ajout.html",{"form":form, "id":id})
+
+def updatetraitement(request, id):
+    tform = TelephoneForm(request.POST)
+    if tform.is_valid():
+        telephone = tform.save(commit=False)
+        telephone.id = id
+        telephone.save()
+        return HttpResponseRedirect("/infos")
+    else:
+        return render(request, "telephone/ajout.html", {"form": tform, "id":id})
