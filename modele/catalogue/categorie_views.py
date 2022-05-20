@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from .forms import CategorieForm
+from . import models
 # Create your views here.
 
 def ajout(request):
@@ -14,6 +15,14 @@ def traitement(request):
     cform = CategorieForm(request.POST)
     if cform.is_valid():
         categorie = cform.save()
-        return render(request,"categorie/traitement.html", {"categorie" : categorie})
+        return HttpResponseRedirect("/infoscategorie")
     else :
         return render(request,"categorie/ajout.html",{"form": cform})
+
+def infos(request):
+    liste = list(models.Categorie.objects.all())
+    return render(request,"categorie/infos.html", {"liste" : liste})
+
+def affiche(request, id):
+    categorie = models.Categorie.objects.get(pk=id)
+    return render(request, "categorie/affiche.html", {"categorie":categorie})

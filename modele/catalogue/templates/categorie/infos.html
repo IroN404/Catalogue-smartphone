@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>liste categorie</h1>
+<a href="/ajoutcategorie">ajouter une categorie</a>
+<ol>
+    {% for l in liste %}
+        <li>{{l}}<a href="/affichecategorie/{{l.id}}">afficher</a></li>
+    {% endfor %}
+</ol>
+</body>
+</html>

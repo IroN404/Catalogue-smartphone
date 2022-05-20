@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>liste telephone</h1>
+<a href="/ajout">ajouter un livre</a>
+<ol>
+    {% for l in liste %}
+        <li>{{l}} <a href="/affiche/{{l.id}}">afficher</a></li>
+    {% endfor %}
+</ol>
+</body>
+</html>
