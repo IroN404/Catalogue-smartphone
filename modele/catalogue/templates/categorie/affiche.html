@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <p>vous avez ajouté {{categorie}}</p>
+    <p>vous avez ajouté {{categorie.nom}}</p>
+<a href="/ajout/{{categorie.id}}/">ajouter un livre</a>
+
+<ol>
+    Liste des livres de la catégorie :
+    {% for l in liste %}
+    <li> {{l.nom}} </li>
+    {% endfor %}
+</ol>
 </body>
 </html>

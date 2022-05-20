@@ -6,11 +6,7 @@
 </head>
 <body>
     <h1>saisie d'une nouvelle categorie</h1>
-    {% if id != '' %}
-    <form method="post" action="/updatetraitementcategorie/{{id}}/">
-        {% else %}
-            <form method="post" action="/traitementcategorie/">
-        {% endif %}
+    <form method="post" action="/traitementcategorie/">
         {% csrf_token %}
         {{form.as_ul}}
         <input type="submit" value="envoyer les données"/>
