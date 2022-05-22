@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Formulaire de saisie</title>
-</head>
-<body>
-    <h1>saisie d'une nouvelle categorie</h1>
+{% extends "telephone/main.html" %}
+{% block title %}
+    Catégories
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="box">
+    <h1>Saisie d'un nouveau fabricant</h1>
     <form method="post" action="/traitementcategorie/">
         {% csrf_token %}
         {{form.as_ul}}
-        <input type="submit" value="envoyer les données"/>
+        <input type="submit" value="Envoyer les données"/>
     </form>
-</body>
-</html>
+    </div>
+</div>
+{% endblock %}

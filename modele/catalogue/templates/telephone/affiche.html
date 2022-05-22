@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <p>vous avez ajouté {{telephone}}</p>
-</body>
-</html>
+{% extends "telephone/main.html" %}
+{% block title %}
+    Catégories
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="box">
+        <h1>{{telephone.modele}}</h1>
+        <p>{{telephone}}</p>
+        <p>­</p>
+        <h3>Détails : </h3>
+        <p>­</p>
+        <p>{{telephone.details}}</p>
+    </div>
+</div>
+{% endblock %}

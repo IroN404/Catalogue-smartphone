@@ -14,21 +14,21 @@
         <a href="/" class="btn btn-1">Home</a>
       </div>
       <div class="buttons">
-        <a href="/ajoutcategorie" class="btn btn-1">Formulaire</a>
+        <a href="/ajoutcategorie" class="btn btn-1">Ajouter fabricant</a>
       </div>
       <div class="buttons">
-        <a href="/infos" class="btn btn-1">Infos téléphone</a>
-      </div>
-      <div class="buttons">
-        <a href="/infoscategorie" class="btn btn-1">Catégorie</a>
+        <a href="/infoscategorie" class="btn btn-1">Visualiser</a>
       </div>
     </div>
 </header>
 
 <body>
         {% block content %}
-        <div class="content">
+        <div class="contentmain">
+                <div class="box">
             <h1>Catalogue de SmartPhones</h1>
+                    <img src="{%static 'picture/main_picture.png' %}" alt="My image">
+                </div>
         </div>
         {% endblock %}
 </body>

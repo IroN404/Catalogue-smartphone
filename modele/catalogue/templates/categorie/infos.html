@@ -5,12 +5,14 @@
 {% block content %}
 <div class="content">
     <div class="box">
-<h1>liste categorie</h1>
-<a href="/ajoutcategorie">ajouter une categorie</a>
+<h1>Liste des Fabricants</h1>
+<a href="/ajoutcategorie">Ajouter un fabricant</a>
 <ol>
     {% for l in liste %}
-        <li>{{l}}<a href="/affichecategorie/{{l.id}}">afficher</a> <a href="/updatecategorie/{{l.id}}">update</a> <a href="/deletecategorie/{{l.id}}">delete</a></li>
+        <li>{{l}} <a href="/affichecategorie/{{l.id}}">Afficher</a> | <a href="/updatecategorie/{{l.id}}">Mise à jour</a> | <a href="/deletecategorie/{{l.id}}">Supprimer</a> </li>
     {% endfor %}
+</ol>
     </div>
 </div>
 {% endblock %}
+

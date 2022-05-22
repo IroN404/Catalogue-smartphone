@@ -9,6 +9,7 @@ header {
   width: 100%;
   height: 15vh;
   z-index: -2;
+  border-bottom: 1rem solid rgba(39, 200, 255, 0.5);
 }
 
 body {
@@ -74,7 +75,17 @@ body {
 .btn-1:hover::after {
   transform: rotate(150deg);
 }
-
+.contentmain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  min-height:75vh;
+  height: auto;
+  color: white;
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -83,22 +94,29 @@ body {
   height: auto;
   align-items: center;
   color: white;
-  border:solid 1px;
 }
 
 .box{
     padding-top: 30px;
     text-decoration: none;
+    max-width: 50%
 }
 li{
-    margin: 15px 15px;
+    margin: 15px 15px 15px;
 }
 a{
      text-decoration: none;
      color: rgba(39, 200, 255, 0.5);
-     margin: 15px 15 px;
-     padding-top: 15px
+     padding-top: 150px;
+     padding-bottom: 15px;
 }
 h1{
     Padding-bottom:15px;
+}
+img{
+    height: 600px;
+    width: 600px;
+}
+form{
+
 }

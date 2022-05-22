@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, redirect
 from .forms import TelephoneForm
 from . import models
 # Create your views here.
@@ -7,10 +7,6 @@ def main(request):
     return render(request,"telephone/main.html")
 
 def ajout(request, id):
-    if request.method == 'POST':
-        form = TelephoneForm(request)
-        return render(request,"telephone/ajout.html", {"form":form, "id":id})
-    else:
         form = TelephoneForm()
         return render(request, "telephone/ajout.html", {"form": form, "id":id})
 
@@ -22,7 +18,7 @@ def traitement(request, id):
         telephone.categorie = categorie
         telephone.categorie_id = id
         telephone.save()
-        return HttpResponseRedirect("/infoscategorie")
+        return redirect('affichecategorie', id=id)
     else :
         return render(request,"telephone/ajout.html", {"form": tform})
 
@@ -42,14 +38,14 @@ def update(request, id):
 def updatetraitement(request, id):
     tform = TelephoneForm(request.POST)
     if tform.is_valid():
-        telephone = tform.save(commit=False)
-        telephone.id = id
-        telephone.save()
-        return HttpResponseRedirect("/infos")
+        categorie = tform.save(commit=False)
+        categorie.id = id
+        categorie.save()
+        return HttpResponseRedirect("/infoscategorie")
     else:
-        return render(request, "telephone/update.html", {"form": tform, "id":id})
+        return render(request, "categorie/update.html", {"form": tform, "id":id})
 
 def delete(request, id):
     telephone = models.Telephone.objects.get(pk=id)
     telephone.delete()
-    return HttpResponseRedirect("/infoscategorie/")
+    return HttpResponseRedirect("/infoscategorie")

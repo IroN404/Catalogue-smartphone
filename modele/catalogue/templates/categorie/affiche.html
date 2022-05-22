@@ -1,18 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <p>vous avez ajouté {{categorie.nom}}</p>
-<a href="/ajout/{{categorie.id}}/">ajouter un livre</a>
+{% extends "telephone/main.html" %}
+{% block title %}
+    Catégories
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="box">
+    <h1>{{categorie.nom}}</h1>
 
+        <p>{{categorie.details}}</p>
+        <p>­</p>
+        <h2>Liste des Smartphones produit par {{categorie.nom}} :</h2>
+        <P>­</P>
+        <a href="/ajout/{{categorie.id}}/">ajouter un SmartPhone</a>
 <ol>
-    Liste des livres de la catégorie :
     {% for l in liste %}
-    <li> {{l.modele}}<a href="/delete/{{l.id}}">delete</a> </li>
+    <li> {{l.modele}} <a href="/affiche/{{l.id}}">Afficher</a> | <a href="/update/{{l.id}}">Mise à jour</a> | <a href="/delete/{{l.id}}">Supprimer</a> </li>
     {% endfor %}
 </ol>
-</body>
-</html>
+    </div>
+</div>
+{% endblock %}
