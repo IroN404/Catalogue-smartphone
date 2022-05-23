@@ -5,12 +5,14 @@
 {% block content %}
 <div class="content">
     <div class="box">
-<h1>liste Smartphones</h1>
-<ol>
-    {% for l in liste %}
-        <li>{{l}}  <a href="/affiche/{{l.id}}">afficher</a> | <a href="/update/{{l.id}}">update</a> | <a href="/delete/{{l.id}}">delete</a></li>
-    {% endfor %}
-</ol>
+
+        <h1>liste Smartphones</h1>
+        <ol>
+            {% for l in liste %}
+                <li>{{l}}  <a href="/affiche/{{l.id}}">afficher</a> | <a href="/update/{{l.id}}">update</a> | <a href="/delete/{{l.id}}">delete</a></li>
+            {% endfor %}
+        </ol>
+
     </div>
 </div>
 {% endblock %}
