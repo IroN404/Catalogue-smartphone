@@ -24,4 +24,4 @@ class Categorie(models.Model):
         return self.nom
 
     def dico(self):
-        return {"nom":self.nom, "detail":self.details}
+        return {"nom":self.nom, "details":self.details}
