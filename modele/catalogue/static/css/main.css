@@ -107,16 +107,24 @@ li{
 a{
      text-decoration: none;
      color: rgba(39, 200, 255, 0.5);
-     padding-top: 150px;
-     padding-bottom: 15px;
 }
 h1{
     Padding-bottom:15px;
 }
-img{
-    height: 600px;
-    width: 600px;
+h2{
+    Padding-bottom:15px;
 }
-form{
-
+h3{
+    Padding-bottom:15px;
+}
+p{
+    Padding-bottom:15px;
+}
+img{
+    height: 75%;
+    width: 50%;
+}
+.title{
+    font-size: 70px;
+    Padding-bottom:50px;
 }
