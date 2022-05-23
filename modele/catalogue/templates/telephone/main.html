@@ -10,26 +10,29 @@
 
 <header>
     <div class="container">
-      <div class="buttons">
+      <div class="buttons home">
         <a href="/" class="btn btn-1">Home</a>
       </div>
       <div class="buttons">
         <a href="/ajoutcategorie" class="btn btn-1">Ajouter fabricant</a>
       </div>
       <div class="buttons">
-        <a href="/infoscategorie" class="btn btn-1">Visualiser</a>
+        <a href="/infos" class="btn btn-1">Téléphones</a>
+      </div>
+      <div class="buttons">
+        <a href="/infoscategorie" class="btn btn-1">Fabricants</a>
       </div>
     </div>
 </header>
 
 <body>
-        {% block content %}
-        <div class="contentmain">
-                <div class="box">
-            <h1>Catalogue de SmartPhones</h1>
-                    <img src="{%static 'picture/main_picture.png' %}" alt="My image">
-                </div>
+{% block content %}
+    <div class="contentmain">
+        <div class="box">
+            <h1 class="title">Catalogue de SmartPhones</h1>
+            <img src="{%static 'picture/main_picture.png' %}" alt="My image">
         </div>
-        {% endblock %}
+    </div>
+    {% endblock %}
 </body>
 </html>
