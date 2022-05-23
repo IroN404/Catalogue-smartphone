@@ -5,12 +5,14 @@
 {% block content %}
 <div class="content">
     <div class="box">
+
     <h1>saisie d'un nouveau telephone</h1>
     <form method="post" action="/traitement/{{id}}/">
         {% csrf_token %}
         {{form.as_ul}}
         <input type="submit" value="Envoyer les données"/>
     </form>
+
     </div>
 </div>
 {% endblock %}
