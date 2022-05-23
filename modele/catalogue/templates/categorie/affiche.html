@@ -1,22 +1,21 @@
 {% extends "telephone/main.html" %}
 {% block title %}
-        Fabricant
+        {{categorie.nom}}
 {% endblock %}
 {% block content %}
 <div class="content">
     <div class="box">
-    <h1>{{categorie.nom}}</h1>
 
-        <p>{{categorie.details}}</p>
-        <p>­</p>
-        <h2>Liste des Smartphones produit par {{categorie.nom}} :</h2>
-        <P>­</P>
-        <a href="/ajout/{{categorie.id}}/">ajouter un SmartPhone</a>
-<ol>
-    {% for l in liste %}
-    <li> {{l.modele}} <a href="/affiche/{{l.id}}">Afficher</a> | <a href="/update/{{l.id}}">Mise à jour</a> | <a href="/delete/{{l.id}}">Supprimer</a> </li>
-    {% endfor %}
-</ol>
+    <h1>{{categorie.nom}}</h1>
+    <p>{{categorie.details}}</p>
+    <h2>Liste des Smartphones produit par {{categorie.nom}} :</h2>
+    <a href="/ajout/{{categorie.id}}/">ajouter un SmartPhone</a>
+    <ol>
+        {% for l in liste %}
+        <li> {{l.modele}} <a href="/affiche/{{l.id}}">Afficher</a> | <a href="/update/{{l.id}}">Mise à jour</a> | <a href="/delete/{{l.id}}">Supprimer</a> </li>
+        {% endfor %}
+    </ol>
+
     </div>
 </div>
 {% endblock %}
