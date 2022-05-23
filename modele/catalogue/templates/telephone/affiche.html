@@ -1,16 +1,16 @@
 {% extends "telephone/main.html" %}
 {% block title %}
-    Infos SmartPhone
+    {{telephone.modele}}
 {% endblock %}
 {% block content %}
 <div class="content">
     <div class="box">
+
         <h1>{{telephone.modele}}</h1>
         <p>{{telephone}}</p>
-        <p>­</p>
         <h3>Détails : </h3>
-        <p>­</p>
         <p>{{telephone.details}}</p>
+
     </div>
 </div>
 {% endblock %}
