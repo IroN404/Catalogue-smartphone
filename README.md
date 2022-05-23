@@ -10,4 +10,4 @@ Il comporte :
 - de la mise en forme CSS
 - l'usage d'un squelette de gabarit pour uniformiser le site 
 
-Le site doit être navigable à partir de la page d'accueil sans avoir besoin de taper les requêtes dans le navigateur autre que celle de la page d'accueil.
+Le site est navigable à partir de la page d'accueil sans avoir besoin de taper les requêtes dans le navigateur autre que celle de la page d'accueil.
