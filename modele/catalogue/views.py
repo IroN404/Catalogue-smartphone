@@ -40,12 +40,14 @@ def updatetraitement(request, id):
     if tform.is_valid():
         categorie = tform.save(commit=False)
         categorie.id = id
+        categorie.categorie_id = models.Telephone.objects.get(pk=id).categorie_id
         categorie.save()
-        return HttpResponseRedirect("/infoscategorie")
+        return HttpResponseRedirect("/affichecategorie/" + str(models.Telephone.objects.get(pk=id).categorie_id) + "/")
     else:
         return render(request, "categorie/update.html", {"form": tform, "id":id})
 
 def delete(request, id):
     telephone = models.Telephone.objects.get(pk=id)
+    telephone_id = str(models.Telephone.objects.get(pk=id).categorie_id)
     telephone.delete()
-    return HttpResponseRedirect("/infoscategorie")
+    return HttpResponseRedirect("/affichecategorie/" + telephone_id + "/")
