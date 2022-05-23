@@ -45,5 +45,7 @@ def updatetraitement(request, id):
 
 def delete(request, id):
     categorie = models.Categorie.objects.get(pk=id)
+    telephone = models.Telephone.objects.filter(categorie_id = id)
     categorie.delete()
+    telephone.delete()
     return HttpResponseRedirect("/infoscategorie/")
